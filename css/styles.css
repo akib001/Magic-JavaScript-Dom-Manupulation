@@ -1,0 +1,27 @@
+.container {
+    border: 6px solid #444;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+
+textarea {
+    background-color: white;
+    border: 4px dashed #444;
+    height: 50vh;
+}
+
+.button__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh;
+}
+
+h1 {
+    color: black;
+    font-weight: 600;
+    padding-top: 1rem;
+}
