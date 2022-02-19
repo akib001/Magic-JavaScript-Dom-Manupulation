@@ -13,10 +13,12 @@ body {
 }
 
 textarea {
-    background-color: white;
-    border: 4px dashed #555;
+    background-color: #333;
+    border: 8px solid #666;
     height: 50vh;
     font-size: 2rem;
+    color: white;
+    font-weight: 450;
 }
 
 .button__wrapper {
@@ -36,18 +38,20 @@ h1 {
 }
 
 button {
-    background-color: rgb(7, 7, 7);
+    background-color: rgb(86, 94, 214);
     outline: 0;
-    border: .2rem solid #444;
+    border: .2rem solid #111;
+    font-size: 1.2rem;
 }
 
 button:hover {
-    background-color: #fff;
-    color: black;
-    border: 2px solid #000;
+    background-color: #333;
+    color: white;
+    border: 2px solid white;
     outline: 0;
 }
 
 #myTextarea:hover, #myTextarea:focus {
-    border: 4px dashed #000;
+    border: 8px solid rgb(86, 94, 214);
+    outline: #111;
 }
