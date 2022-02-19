@@ -32,22 +32,22 @@ const reverseBtnHandler = () => {
     //  at first .split() method converts a line string to array of each characters 
     // then I sorted characters alphabetically then join all alphabet into a string. 
     // Atlast add \n new line so that next reversed line will start from another line
-    reversedlines += textLine.split('').sort().join('') + '\n';
+    reversedlines += textLine.split('').reverse().join('') + '\n';
   });
 
   textArea.value = reversedlines;
 };
 
 const stripBlankBtnHandler = () => {
-    const textLines = textArea.value.trim().split('\n');
+    const textLines = textArea.value.split('\n');
     let strippedLines = '';
-
+    console.log(textLines)
     textLines.forEach((textLine) => {
-        if (textLine === "") {
+        if (textLine=== "") {
             return
-        }
-        strippedLines += textLine + '\n';
+        } 
 
+        strippedLines += textLine.trim() + '\n';
     })
 
     textArea.value = strippedLines;
