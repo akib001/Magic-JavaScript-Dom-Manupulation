@@ -14,7 +14,7 @@ body {
 
 textarea {
     background-color: #333;
-    border: 8px solid #666;
+    border: 7px solid #666;
     height: 50vh;
     font-size: 2rem;
     color: white;
@@ -52,6 +52,6 @@ button:hover {
 }
 
 #myTextarea:hover, #myTextarea:focus {
-    border: 8px solid rgb(86, 94, 214);
+    border: 7px dashed #666;
     outline: #111;
 }
