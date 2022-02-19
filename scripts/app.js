@@ -6,6 +6,7 @@ const sortBtn = document.querySelector('.btn__sort');
 const reverseBtn = document.querySelector('.btn__reverse');
 const stripBlankBtn = document.querySelector('.btn__strip_blank');
 const addNumbersBtn = document.querySelector('.btn__add_numbers');
+const shuffleBtn = document.querySelector('.btn__shuffle');
 
 // Event Handlers
 const clearBtnHandler = () => {
@@ -52,6 +53,22 @@ const stripBlankBtnHandler = () => {
     textArea.value = strippedLines;
 }
 
+const addNumbersBtnHandler = () => {
+    const textLines = textArea.value.trim().split('\n');
+    let numberAddedLines = '';
+
+    textLines.forEach((textLine, index) => {
+        numberAddedLines += `${index+1})` + textLine + '\n';
+    })
+
+    textArea.value = numberAddedLines;
+}
+
+
+const shuffleBtnHandler = () => {
+    const textLines = textArea.value.trim().split('\n');
+    textArea.value = textLines.sort(() => Math.random() - 0.5).join('\n')    
+}
 
 
 //Button event listener
@@ -60,4 +77,5 @@ capitalizeBtn.addEventListener('click', capitalizeBtnHandler);
 sortBtn.addEventListener('click', sortBtnHandler);
 reverseBtn.addEventListener('click', reverseBtnHandler);
 stripBlankBtn.addEventListener('click', stripBlankBtnHandler);
-addNumbersBtn.addEventListener('click', stripBlankBtnHandler);
+addNumbersBtn.addEventListener('click', addNumbersBtnHandler);
+shuffleBtn.addEventListener('click', shuffleBtnHandler);
